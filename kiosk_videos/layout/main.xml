@@ -11,7 +11,7 @@
 						</formline>
 						<label text="За да добавите видео файл, ползвайте файловият мениджър. Файловете, добавяйте в /home/kiosk/videos/" />
 					</formgroup>
-					<formgroup text="Начална страница">
+					<formgroup text="Сила на звука">
 						<label text="Сила на звука (0 = без звук; 100 = максимум сила на звука)" />
 						<formline>
 							<textbox bind="video_volume" />
