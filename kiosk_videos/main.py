@@ -8,6 +8,7 @@ from ajenti.ui.binder import Binder
 class SanickioskScreensaverPrefs (SectionPlugin):
 	default_classconfig = {
 		'enable_videos': False,
+        'video_volume': 0
 	}
 	classconfig_root = True
 
