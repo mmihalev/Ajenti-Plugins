@@ -8,7 +8,7 @@ from ajenti.ui.binder import Binder
 class SanickioskScreensaverPrefs (SectionPlugin):
 	default_classconfig = {
 		'enable_browser': False,
-		'home_url': 'https://locahost:8080',
+		'home_url': 'http://locahost:8080',
 	}
 	classconfig_root = True
 
