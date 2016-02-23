@@ -7,13 +7,7 @@ from ajenti.ui.binder import Binder
 @plugin
 class SanickioskScreensaverPrefs (SectionPlugin):
 	default_classconfig = {
-		'xscreensaver_enable': False,
-		'xscreensaver_idle': '0:00:10',
-		'glslideshow_duration': '',
-		'glslideshow_pan': '',
-		'glslideshow_fade': '3',
-		'glslideshow_zoom': '100',
-		'glslideshow_clip': False,
+		'photos_enable': False,
 	}
 	classconfig_root = True
 
@@ -34,5 +28,5 @@ class SanickioskScreensaverPrefs (SectionPlugin):
 		self.binder.populate()
 
 		all_vars = '\n'.join([k + '="' + str(v) + '"' for k,v in self.classconfig.iteritems()])
-		open('/home/kiosk/.kiosk/screensaver.cfg', 'w').write(all_vars) #save
+		open('/home/kiosk/.kiosk/photos.cfg', 'w').write(all_vars) #save
 

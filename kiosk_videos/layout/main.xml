@@ -9,10 +9,10 @@
 						<formline>
 							<checkbox text="Включи режим Видео" bind="enable_videos" />
 						</formline>
-						<label text="За да добавите видео файл, ползвайте файловият мениджър. Файловете, добавяйте в /home/kiosk/videos/" />
+						<label text="За да добавите видео файл, ползвайте файловият мениджър. Файловете, добавяйте в папка Videos" />
 					</formgroup>
 					<formgroup text="Сила на звука">
-						<label text="Сила на звука (0 = без звук; 100 = максимум сила на звука)" />
+						<label text="Сила на звука (0 = без звук; 100 = максимум сила на звука) в %" />
 						<formline>
 							<textbox bind="video_volume" />
 						</formline>

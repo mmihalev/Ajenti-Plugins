@@ -8,7 +8,7 @@ info = PluginInfo(
 	icon='picture',
 	dependencies=[
 		PluginDependency('main'),
-        BinaryDependency('xscreensaver'),
+        BinaryDependency('feh'),
 	],
 )
 
