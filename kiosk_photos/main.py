@@ -55,5 +55,5 @@ class SanickioskScreensaverPrefs (SectionPlugin):
             "Comment[en_US]=\n"
             "Comment=") % (photos_enable)
             
-		open('/home/kiosk/.config/autostart/2-photos.desktop', 'w').write(cfg) #save
+        open('/home/kiosk/.config/autostart/2-photos.desktop', 'w').write(cfg) #save
 
