@@ -36,18 +36,18 @@ class SanickioskScreensaverPrefs (SectionPlugin):
 		    if k == 'home_url':
 			    home_url = v.lower()
         
-        if enable_browser == "X-GNOME-Autostart-enabled=true":
-            ajenti_config = "/etc/ajenti/config.json"
+        	if enable_browser == "X-GNOME-Autostart-enabled=true":
+			ajenti_config = "/etc/ajenti/config.json"
             
-            #Disable Video Mode
-            subprocess.call(['sed', '-i', r's/\\"enable_videos\\": true/\\"enable_videos\\": false/g', ajenti_config])
-            subprocess.call(['sed', '-i', r's/X-GNOME-Autostart-enabled=true/X-GNOME-Autostart-enabled=false/g', "/home/kiosk/.config/autostart/2-videos.desktop"])
+            		#Disable Video Mode
+            	    	subprocess.call(['sed', '-i', r's/\\"enable_videos\\": true/\\"enable_videos\\": false/g', ajenti_config])
+            	    	subprocess.call(['sed', '-i', r's/X-GNOME-Autostart-enabled=true/X-GNOME-Autostart-enabled=false/g', "/home/kiosk/.config/autostart/2-videos.desktop"])
             
-            #Disable Photo Mode
-            subprocess.call(['sed', '-i', r's/\\"photos_enable\\": true/\\"photos_enable\\": false/g', ajenti_config])
-            subprocess.call(['sed', '-i', r's/X-GNOME-Autostart-enabled=true/X-GNOME-Autostart-enabled=false/g', "/home/kiosk/.config/autostart/2-photos.desktop"])
+            	    	#Disable Photo Mode
+            	    	subprocess.call(['sed', '-i', r's/\\"photos_enable\\": true/\\"photos_enable\\": false/g', ajenti_config])
+            	    	subprocess.call(['sed', '-i', r's/X-GNOME-Autostart-enabled=true/X-GNOME-Autostart-enabled=false/g', "/home/kiosk/.config/autostart/2-photos.desktop"])
         
-        cfg = ("[Desktop Entry]\n"
+        	cfg = ("[Desktop Entry]\n"
 			"Type=Application\n"
 			"Exec=chromium-browser --kiosk --no-first-run --disable-infobars --disable-session-crashed-bubble %s\n"
 			"Hidden=false\n"
@@ -58,4 +58,4 @@ class SanickioskScreensaverPrefs (SectionPlugin):
 			"Comment[en_US]=\n"
 			"Comment=") % (home_url, enable_browser)
         
-        open('/home/kiosk/.config/autostart/2-browser.desktop', 'w').write(cfg) #save
+        	open('/home/kiosk/.config/autostart/2-browser.desktop', 'w').write(cfg) #save
