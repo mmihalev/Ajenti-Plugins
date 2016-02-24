@@ -35,7 +35,7 @@ class SanickioskScreensaverPrefs (SectionPlugin):
 			    enable_browser = "X-GNOME-Autostart-enabled=%s" % str(v).lower()
 		    if k == 'home_url':
 			    home_url = v.lower()
-
+        
         if enable_browser == "X-GNOME-Autostart-enabled=true":
             ajenti_config = "/etc/ajenti/config.json"
             
@@ -46,8 +46,8 @@ class SanickioskScreensaverPrefs (SectionPlugin):
             #Disable Photo Mode
             subprocess.call(['sed', '-i', r's/\\"photos_enable\\": true/\\"photos_enable\\": false/g', ajenti_config])
             subprocess.call(['sed', '-i', r's/X-GNOME-Autostart-enabled=true/X-GNOME-Autostart-enabled=false/g', "/home/kiosk/.config/autostart/2-photos.desktop"])
-            
-		cfg = ("[Desktop Entry]\n"
+        
+        cfg = ("[Desktop Entry]\n"
 			"Type=Application\n"
 			"Exec=chromium-browser --kiosk --no-first-run --disable-infobars --disable-session-crashed-bubble %s\n"
 			"Hidden=false\n"
@@ -57,5 +57,5 @@ class SanickioskScreensaverPrefs (SectionPlugin):
 			"Name=2-browser\n"
 			"Comment[en_US]=\n"
 			"Comment=") % (home_url, enable_browser)
-
-		open('/home/kiosk/.config/autostart/2-browser.desktop', 'w').write(cfg) #save
+        
+        open('/home/kiosk/.config/autostart/2-browser.desktop', 'w').write(cfg) #save
