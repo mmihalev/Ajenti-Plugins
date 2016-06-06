@@ -49,7 +49,7 @@ class SanickioskScreensaverPrefs (SectionPlugin):
         
         	cfg = ("[Desktop Entry]\n"
 			"Type=Application\n"
-			"Exec=chromium-browser --kiosk --no-first-run --disable-infobars --disable-session-crashed-bubble %s\n"
+			"Exec=chromium-browser --kiosk --no-first-run --disable-infobars --disable-session-crashed-bubble --incognito %s\n"
 			"Hidden=false\n"
 			"NoDisplay=false\n"
 			"%s\n"
